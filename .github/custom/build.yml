@@ -1,0 +1,65 @@
+name: Build and Deploy Unity WebGL
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, '[build]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Read Unity Version
+        run: |
+          VERSION=$(grep '^m_EditorVersion:' ProjectSettings/ProjectVersion.txt | cut -d':' -f2 | xargs)
+          echo "UNITY_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Cache Unity Library
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ env.UNITY_VERSION }}-${{ github.ref }}
+          restore-keys: |
+            Library-${{ env.UNITY_VERSION }}-
+
+      - name: Unity - Build WebGL
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: ${{ env.UNITY_VERSION }}
+          targetPlatform: WebGL
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: WebGL-Build
+          path: build/WebGL
+
+  deploy:
+    needs: build
+    if: contains(github.event.head_commit.message, '[build]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: WebGL-Build
+          path: build/WebGL
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/WebGL/*
+          publish_branch: release
+          keep_files: true

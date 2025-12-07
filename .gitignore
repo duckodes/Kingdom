@@ -1,0 +1,33 @@
+# Unity 自動生成的資料夾
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset Store 下載快取
+AssetStoreTools/
+
+# 自動生成的 VS/IDE 設定檔
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.user
+*.userprefs
+*.booproj
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# Crash 報告與暫存檔
+sysinfo.txt
+*.stackdump
+
+# Unity Cloud / Collaborate
+UnityPackageManager/
