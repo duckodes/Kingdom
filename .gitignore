@@ -11,6 +11,7 @@
 AssetStoreTools/
 
 # 自動生成的 VS/IDE 設定檔
+.vs/
 .vscode/
 .idea/
 *.sln
@@ -31,3 +32,6 @@ sysinfo.txt
 
 # Unity Cloud / Collaborate
 UnityPackageManager/
+
+# Unity 排版
+UserSettings/
