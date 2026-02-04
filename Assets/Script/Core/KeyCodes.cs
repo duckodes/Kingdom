@@ -1,4 +1,7 @@
 using System;
+using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 [Serializable]
@@ -7,6 +10,7 @@ public class Keys
     public KeyCode Jump = KeyCode.Space;
     public KeyCode MoveLeft = KeyCode.A;
     public KeyCode MoveRight = KeyCode.D;
+    public KeyCode MoveE = KeyCode.E;
 }
 public class KeyCodes : Base, IAwake
 {
@@ -27,7 +31,14 @@ public class KeyCodes : Base, IAwake
     {
         if (PlayerPrefs.HasKey(nameof(Keys)))
         {
-            keys = JsonUtility.FromJson<Keys>(PlayerPrefs.GetString(nameof(Keys)));
+            string jsonData = PlayerPrefs.GetString(nameof(Keys));
+            keys = JsonUtility.FromJson<Keys>(jsonData);
+
+            if (!HasAllFields(jsonData))
+            {
+                SetKeys();
+                Debug.Log("isSave");
+            }
         }
         else
         {
@@ -35,4 +46,20 @@ public class KeyCodes : Base, IAwake
             SetKeys();
         }
     }
+    public static bool HasAllFields(string json)
+    {
+        var matches = Regex.Matches(json, "\"(\\w+)\"\\s*:");
+
+        var jsonFields = matches
+            .Select(m => m.Groups[1].Value)
+            .ToHashSet();
+
+        var keyFields = typeof(Keys)
+            .GetFields(BindingFlags.Public | BindingFlags.Instance)
+            .Select(f => f.Name)
+            .ToHashSet();
+
+        return jsonFields.SetEquals(keyFields);
+    }
+
 }
