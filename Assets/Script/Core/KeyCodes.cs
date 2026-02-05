@@ -37,7 +37,6 @@ public class KeyCodes : Base, IAwake
             if (!HasAllFields(jsonData))
             {
                 SetKeys();
-                Debug.Log("isSave");
             }
         }
         else

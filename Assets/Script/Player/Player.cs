@@ -3,9 +3,12 @@ using UnityEngine;
 public class Player : Base, IStart, IUpdate
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float jumpForce = 7.0f;
+    [SerializeField] private float jumpForce = 20.0f;
+    private const int maxJumpTimes = 2;
+    private int jumpTimes;
     private float width;
     private float height;
+    private bool isGround;
     public void OnStart()
     {
         width = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
@@ -13,10 +16,24 @@ public class Player : Base, IStart, IUpdate
     }
     public void OnUpdate()
     {
-        if (IsGround() && Input.GetKeyDown(KeyCodes.Jump))
+        Jump();
+        Move();
+    }
+    private void Jump()
+    {
+        if (jumpTimes >= maxJumpTimes)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (IsGround()) jumpTimes = 0;
+            else return;
         }
+        if (Input.GetKeyDown(KeyCodes.Jump))
+        {
+            jumpTimes++;
+            rb.AddForce(Vector2.up * jumpForce);
+        }
+    }
+    private void Move()
+    {
         float moveInput = 0f;
         if (Input.GetKey(KeyCodes.MoveLeft))
         {
@@ -34,10 +51,21 @@ public class Player : Base, IStart, IUpdate
         {
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, 3.0f * Time.deltaTime), rb.velocity.y);
         }
-
     }
     private bool IsGround()
     {
-        return Physics2D.Raycast(transform.position + height * 0.4f * Vector3.down, Vector2.down, 0.05f).collider != null;
+        float halfWidth = width * 0.5f;
+        float halfHeight = height * 0.6f;
+
+        Vector3 leftOrigin = transform.position + Vector3.left * halfWidth + Vector3.down * halfHeight;
+        Vector3 midOrigin = transform.position + halfHeight * Vector3.down;
+        Vector3 rightOrigin = transform.position + Vector3.right * halfWidth + Vector3.down * halfHeight;
+
+        bool leftHit = Physics2D.Raycast(leftOrigin, Vector2.down, 0.2f).collider != null;
+        bool midHit = Physics2D.Raycast(midOrigin, Vector2.down, 0.2f).collider != null;
+        bool rightHit = Physics2D.Raycast(rightOrigin, Vector2.down, 0.2f).collider != null;
+
+        return isGround = (leftHit || midHit || rightHit);
+
     }
 }
