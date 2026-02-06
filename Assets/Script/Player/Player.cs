@@ -17,6 +17,7 @@ public class Player : Base, IStart, IUpdate
     private int jumpTimes;
     private float width;
     private float height;
+    private float lastDir;
     public void OnStart()
     {
         width = spriteRenderer.bounds.size.x;
@@ -53,14 +54,22 @@ public class Player : Base, IStart, IUpdate
         if (Input.GetKey(KeyCodes.MoveLeft) && !Input.GetKey(KeyCodes.MoveRight))
         {
             moveInput = -1f;
+            lastDir = moveInput;
             spriteRenderer.flipX = true;
-            animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
+            if (!IsWallLayer())
+            {
+                animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
+            }
         }
         if (Input.GetKey(KeyCodes.MoveRight) && !Input.GetKey(KeyCodes.MoveLeft))
         {
             moveInput = 1f;
+            lastDir = moveInput;
             spriteRenderer.flipX = false;
-            animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
+            if (!IsWallLayer())
+            {
+                animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
+            }
         }
         if (Input.GetKeyUp(KeyCodes.MoveLeft) || Input.GetKeyUp(KeyCodes.MoveRight) || rb.velocity.x == 0)
         {
@@ -68,13 +77,19 @@ public class Player : Base, IStart, IUpdate
         }
         if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown) && !IsGroundLayer())
         {
+            animator.Play("PlayerDown");
             Collider2D.enabled = false;
             await Wait.Milliseconds(300, out Action cancel);
             Collider2D.enabled = true;
         }
-        if (Input.GetKeyUp(KeyCodes.MoveDown) || Input.GetKeyUp(KeyCodes.Jump))
+        if (Input.GetKeyUp(KeyCodes.MoveDown) || Input.GetKeyUp(KeyCodes.Jump) || IsGroundLayer() || IsWallLayer())
         {
             Collider2D.enabled = true;
+        }
+        if (IsWallLayer() && !IsGroundLayer())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -3.0f);
+            animator.Play("PlayerDown");
         }
         if (moveInput != 0)
         {
@@ -104,7 +119,24 @@ public class Player : Base, IStart, IUpdate
     {
         float halfHeight = height * 0.6f;
         Vector3 midOrigin = transform.position + halfHeight * Vector3.down;
+        var hit = Physics2D.Raycast(midOrigin, Vector2.down, 0.2f).collider;
+        if (hit != null)
+        {
+            return hit.gameObject.layer == LayerMask.NameToLayer("Ground");
+        }
+        return false;
+    }
+    private bool IsWallLayer()
+    {
+        float halfWidth = width * 0.5f;
+        Vector3 leftOrigin = transform.position + halfWidth * Vector3.left;
+        Vector3 rightOrigin = transform.position + halfWidth * Vector3.right;
+        var hitLeft = Physics2D.Raycast(leftOrigin, Vector2.left, 0.1f).collider;
+        var hitRight = Physics2D.Raycast(rightOrigin, Vector2.right, 0.1f).collider;
 
-        return Physics2D.Raycast(midOrigin, Vector2.down, 0.2f).collider.gameObject.layer == LayerMask.NameToLayer("Ground");
+        bool leftIsWall = hitLeft != null && hitLeft.gameObject.layer == LayerMask.NameToLayer("Wall");
+        bool rightIsWall = hitRight != null && hitRight.gameObject.layer == LayerMask.NameToLayer("Wall");
+
+        return leftIsWall || rightIsWall;
     }
 }
