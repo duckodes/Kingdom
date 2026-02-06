@@ -10,7 +10,7 @@ public class Keys
     public KeyCode Jump = KeyCode.Space;
     public KeyCode MoveLeft = KeyCode.A;
     public KeyCode MoveRight = KeyCode.D;
-    public KeyCode MoveE = KeyCode.E;
+    public KeyCode MoveDown = KeyCode.S;
 }
 public class KeyCodes : Base, IAwake
 {
@@ -18,6 +18,7 @@ public class KeyCodes : Base, IAwake
     public static KeyCode Jump => keys.Jump;
     public static KeyCode MoveLeft => keys.MoveLeft;
     public static KeyCode MoveRight => keys.MoveRight;
+    public static KeyCode MoveDown => keys.MoveDown;
     public void OnAwake()
     {
         UpdateKeys();

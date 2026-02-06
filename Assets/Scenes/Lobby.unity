@@ -418,7 +418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 476919146}
-  jumpForce: 7
+  collider2D: {fileID: 476919147}
+  jumpForce: 250
 --- !u!50 &476919146
 Rigidbody2D:
   serializedVersion: 4

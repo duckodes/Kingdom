@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : Base, IStart, IUpdate
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Collider2D collider2D;
     [SerializeField] private float jumpForce = 20.0f;
     private const int maxJumpTimes = 2;
     private int jumpTimes;
@@ -23,10 +24,10 @@ public class Player : Base, IStart, IUpdate
     {
         if (jumpTimes >= maxJumpTimes)
         {
-            if (IsGround()) jumpTimes = 0;
+            if (IsGround() && rb.velocity.y < 0) jumpTimes = 0;
             else return;
         }
-        if (Input.GetKeyDown(KeyCodes.Jump))
+        if (Input.GetKeyDown(KeyCodes.Jump) && !Input.GetKey(KeyCodes.MoveDown))
         {
             jumpTimes++;
             rb.AddForce(Vector2.up * jumpForce);
@@ -42,6 +43,14 @@ public class Player : Base, IStart, IUpdate
         if (Input.GetKey(KeyCodes.MoveRight))
         {
             moveInput = 1f;
+        }
+        if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown))
+        {
+            collider2D.enabled = false;
+        }
+        if (Input.GetKeyUp(KeyCodes.MoveDown))
+        {
+            collider2D.enabled = true;
         }
         if (moveInput != 0)
         {
