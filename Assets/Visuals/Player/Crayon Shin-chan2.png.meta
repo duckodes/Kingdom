@@ -1,0 +1,1036 @@
+fileFormatVersion: 2
+guid: 3ddccbf8c59dd604bafbd2d64f2ac3e5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 499
+        width: 53
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82e34e49685e484894d1dd328ed52d5
+      internalID: -575176336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 498
+        width: 59
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1ca450e3b3b0346ab433e6c5efb996
+      internalID: 2065709049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 508
+        width: 93
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79960dab6f956af479cb958fe6277444
+      internalID: 104131896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 508
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0c9dd7d00d3ed43b855be9241a947b
+      internalID: 2075615434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 507
+        width: 100
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd50a9fa1eafb2148ad14b00aa269630
+      internalID: 1621968400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_5
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 506
+        width: 94
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bbe8c6c46cde947b3da38d8fa083f4
+      internalID: -190744837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_6
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 508
+        width: 93
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a92b447c7b1d3244815ca796793d866
+      internalID: 1409124596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_7
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 562
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b643ba504b010314b8a67d56e8e6f4d6
+      internalID: -477818102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_8
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 504
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9df7cd251155ac48913a1ef6a9cf888
+      internalID: 1611026680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 375
+        width: 55
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25ec2f2a48ab014faa25f20db6bab77
+      internalID: 576433542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 387
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b4e715c78bb0048a010d42b78a3e04
+      internalID: 344393149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_11
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 387
+        width: 93
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34449d0c11157f42a4cafb8d74087cf
+      internalID: 1423229488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_12
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 387
+        width: 95
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c983b3819aa718648a5e0ab9446df06c
+      internalID: -1826908335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_13
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 386
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a63a4781cf8cc498bb3a49f20fc322
+      internalID: -1047143729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_14
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 385
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9f76b0cf47857439f32bf1cfc427c9
+      internalID: 225274028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_15
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 388
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05f273644a7f8845b828c2ec4235405
+      internalID: 2126505470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_16
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 388
+        width: 93
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a73653a76e5c8b4abd67268d227feb7
+      internalID: 2045952413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_17
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 261
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf83bb4e4f3cf684aa2e52907ae3ec97
+      internalID: 1821525869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_18
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 260
+        width: 97
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6424b71cac580454bbc2aa0caadfe806
+      internalID: -2029621079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_19
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 261
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6d887829b48c044a5f57d980d5cda3
+      internalID: -1529139040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_20
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 261
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a6a6fa088b7fa4da3dedaf849d2f80
+      internalID: 872392735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_21
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 261
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2070ddd44cebc974c866416473c5ff7d
+      internalID: 1175757685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_22
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 262
+        width: 91
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65abfb1fd94473479b1986dada5f566
+      internalID: -640376635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_23
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 263
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c73542d29469c34599181e5da70f14d
+      internalID: -414393962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_24
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 261
+        width: 87
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ca8a1cb78c21e40a823365a31306b9
+      internalID: 2038879519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_25
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 136
+        width: 89
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f154c0d71d8e7d646ba750435fdbd1fe
+      internalID: -1865233527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 139
+        width: 94
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b49d8342c9c6544cbd71c98da9c1cbe
+      internalID: 615332679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_27
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 139
+        width: 97
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ed5dd00f5234947b50b9317393f665
+      internalID: 1755648975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_28
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 138
+        width: 97
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c76c7cd7da03744ea71480e65e1a72d
+      internalID: -1848899591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_29
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 134
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b766f01e4495e54db16491f5c9e0c9a
+      internalID: -1501525990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_30
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 136
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebc3ff74293f3842a8b3e33668b9beb
+      internalID: 124666272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_31
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 138
+        width: 93
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e51ef034e29294781eb1c5db51a17f
+      internalID: -1791180841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_32
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 138
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332215d117640af468f335a0d369ca1b
+      internalID: 1071717557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_33
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 70
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbbdcf58e0c3bf4ea5a5163b00e90f5
+      internalID: 1956087675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_34
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 8
+        width: 91
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea1d662eda341c45bf5614a34f0235d
+      internalID: -1972349007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_35
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 6
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828fa8b43fa1b8a46bfcaecf3675e172
+      internalID: -44139242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_36
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 12
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba670ab9a4228d4aad8e13b0a9c1bd2
+      internalID: -1568578884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_37
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 10
+        width: 92
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93df578b5eb7734d99781cf96bd3f15
+      internalID: 194441889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_38
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 12
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8c453c4890c404c8d22bc70725ca5d
+      internalID: -413721072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_39
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 12
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5765684c4cef85a47b449911c6a2abb6
+      internalID: 1825439778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crayon Shin-chan2_40
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 12
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b88f9702cab3d49bf97bb22a891b13
+      internalID: -809777654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Crayon Shin-chan2_39: 1825439778
+      Crayon Shin-chan2_23: -414393962
+      Crayon Shin-chan2_15: 2126505470
+      Crayon Shin-chan2_10: 344393149
+      Crayon Shin-chan2_1: 2065709049
+      Crayon Shin-chan2_21: 1175757685
+      Crayon Shin-chan2_34: -1972349007
+      Crayon Shin-chan2_9: 576433542
+      Crayon Shin-chan2_13: -1047143729
+      Crayon Shin-chan2_24: 2038879519
+      Crayon Shin-chan2_19: -1529139040
+      Crayon Shin-chan2_26: 615332679
+      Crayon Shin-chan2_33: 1956087675
+      Crayon Shin-chan2_4: 1621968400
+      Crayon Shin-chan2_6: 1409124596
+      Crayon Shin-chan2_8: 1611026680
+      Crayon Shin-chan2_18: -2029621079
+      Crayon Shin-chan2_20: 872392735
+      Crayon Shin-chan2_22: -640376635
+      Crayon Shin-chan2_27: 1755648975
+      Crayon Shin-chan2_7: -477818102
+      Crayon Shin-chan2_37: 194441889
+      Crayon Shin-chan2_35: -44139242
+      Crayon Shin-chan2_25: -1865233527
+      Crayon Shin-chan2_40: -809777654
+      Crayon Shin-chan2_36: -1568578884
+      Crayon Shin-chan2_3: 2075615434
+      Crayon Shin-chan2_0: -575176336
+      Crayon Shin-chan2_28: -1848899591
+      Crayon Shin-chan2_12: -1826908335
+      Crayon Shin-chan2_16: 2045952413
+      Crayon Shin-chan2_29: -1501525990
+      Crayon Shin-chan2_14: 225274028
+      Crayon Shin-chan2_38: -413721072
+      Crayon Shin-chan2_30: 124666272
+      Crayon Shin-chan2_2: 104131896
+      Crayon Shin-chan2_5: -190744837
+      Crayon Shin-chan2_32: 1071717557
+      Crayon Shin-chan2_11: 1423229488
+      Crayon Shin-chan2_17: 1821525869
+      Crayon Shin-chan2_31: -1791180841
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

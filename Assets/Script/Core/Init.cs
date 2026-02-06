@@ -18,6 +18,10 @@ public interface IFixedUpdate
 {
     public void OnFixedUpdate();
 }
+public interface ILateUpdate
+{
+    public void OnLateUpdate();
+}
 public interface IDestroy
 {
     public void Destroy();
@@ -41,6 +45,7 @@ public class Init : MonoBehaviour
     private readonly List<IStart> starts = new List<IStart>();
     private readonly List<IUpdate> updates = new List<IUpdate>();
     private readonly List<IFixedUpdate> fixedUpdates = new List<IFixedUpdate>();
+    private readonly List<ILateUpdate> lateUpdates = new List<ILateUpdate>();
     private readonly List<IDestroy> destroys = new List<IDestroy>();
 
     private void Awake()
@@ -82,6 +87,13 @@ public class Init : MonoBehaviour
             fixedUpdate.OnFixedUpdate();
         }
     }
+    private void LateUpdate()
+    {
+        foreach (var lateUpdate in lateUpdates)
+        {
+            lateUpdate.OnLateUpdate();
+        }
+    }
     private void OnDestroy()
     {
         foreach (var destroy in destroys)
@@ -108,6 +120,10 @@ public class Init : MonoBehaviour
         {
             instance.fixedUpdates.Add(iFixedUpdate);
         }
+        if (t is ILateUpdate iLateUpdate)
+        {
+            instance.lateUpdates.Add(iLateUpdate);
+        }
         if (t is IDestroy iDestroy)
         {
             instance.destroys.Add(iDestroy);
@@ -131,6 +147,10 @@ public class Init : MonoBehaviour
         if (t is IFixedUpdate iFixedUpdate)
         {
             instance.fixedUpdates.Remove(iFixedUpdate);
+        }
+        if (t is ILateUpdate iLateUpdate)
+        {
+            instance.lateUpdates.Remove(iLateUpdate);
         }
         if (t is IDestroy iDestroy)
         {
