@@ -17,7 +17,7 @@ public class Player : Base, IStart, IUpdate
     private int jumpTimes;
     private float width;
     private float height;
-    private float lastDir;
+    private bool JumpButtonClicked;
     public void OnStart()
     {
         width = spriteRenderer.bounds.size.x;
@@ -41,7 +41,8 @@ public class Player : Base, IStart, IUpdate
                 return;
             }
         }
-        if (Input.GetKeyDown(KeyCodes.Jump) && !Input.GetKey(KeyCodes.MoveDown))
+        if (Input.GetKeyDown(KeyCodes.Jump) && !Input.GetKey(KeyCodes.MoveDown)
+            || ControlButtons.Instance.JumpButtonClicked)
         {
             jumpTimes++;
             rb.AddForce(Vector2.up * jumpForce);
@@ -51,46 +52,59 @@ public class Player : Base, IStart, IUpdate
     private async void Move()
     {
         float moveInput = 0f;
-        if (Input.GetKey(KeyCodes.MoveLeft) && !Input.GetKey(KeyCodes.MoveRight))
+        // Move Left
+        if (Input.GetKey(KeyCodes.MoveLeft) && !Input.GetKey(KeyCodes.MoveRight) 
+            || Joystick.Instance.Direction.x < 0)
         {
             moveInput = -1f;
-            lastDir = moveInput;
             spriteRenderer.flipX = true;
             if (!IsWallLayer())
             {
                 animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
             }
         }
-        if (Input.GetKey(KeyCodes.MoveRight) && !Input.GetKey(KeyCodes.MoveLeft))
+        // Move Right
+        if (Input.GetKey(KeyCodes.MoveRight) && !Input.GetKey(KeyCodes.MoveLeft) 
+            || Joystick.Instance.Direction.x > 0)
         {
             moveInput = 1f;
-            lastDir = moveInput;
             spriteRenderer.flipX = false;
             if (!IsWallLayer())
             {
                 animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Run);
             }
         }
-        if (Input.GetKeyUp(KeyCodes.MoveLeft) || Input.GetKeyUp(KeyCodes.MoveRight) || rb.velocity.x == 0)
+        // Stop Anim
+        if (Input.GetKeyUp(KeyCodes.MoveLeft)
+            || Input.GetKeyUp(KeyCodes.MoveRight)
+            || rb.velocity.x == 0)
         {
             animator.SetInteger(nameof(AnimatorMotion), (int)AnimatorMotion.Idle);
         }
-        if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown) && !IsGroundLayer())
+        // Go Down
+        if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown) && !IsGroundLayer()
+            || Joystick.Instance.Direction.y < 0 && ControlButtons.Instance.JumpButtonClicked)
         {
             animator.Play("PlayerDown");
             Collider2D.enabled = false;
             await Wait.Milliseconds(300, out Action cancel);
             Collider2D.enabled = true;
         }
-        if (Input.GetKeyUp(KeyCodes.MoveDown) || Input.GetKeyUp(KeyCodes.Jump) || IsGroundLayer() || IsWallLayer())
+        // Collider Limit
+        if (Input.GetKeyUp(KeyCodes.MoveDown)
+            || Input.GetKeyUp(KeyCodes.Jump)
+            || IsGroundLayer()
+            || IsWallLayer())
         {
             Collider2D.enabled = true;
         }
+        // Stick On Wall Velocity with Anim
         if (IsWallLayer() && !IsGroundLayer())
         {
             rb.velocity = new Vector2(rb.velocity.x, -3.0f);
             animator.Play("PlayerDown");
         }
+        // MoveLeft or MoveRight
         if (moveInput != 0)
         {
             rb.velocity = new Vector2(moveInput * 3.0f, rb.velocity.y);
