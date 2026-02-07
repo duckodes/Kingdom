@@ -42,7 +42,7 @@ public class Player : Base, IStart, IUpdate
             }
         }
         if (Input.GetKeyDown(KeyCodes.Jump) && !Input.GetKey(KeyCodes.MoveDown)
-            || ControlButtons.Instance.JumpButtonClicked)
+            || Joystick.Instance.Direction.y > 0 && ControlButtons.Instance.JumpButtonClicked)
         {
             jumpTimes++;
             rb.AddForce(Vector2.up * jumpForce);
@@ -84,7 +84,7 @@ public class Player : Base, IStart, IUpdate
         }
         // Go Down
         if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown) && !IsGroundLayer()
-            || Joystick.Instance.Direction.y < 0 && ControlButtons.Instance.JumpButtonClicked)
+            || Joystick.Instance.Direction.y < 0 && ControlButtons.Instance.JumpButtonClicked && !IsGroundLayer())
         {
             animator.Play("PlayerDown");
             Collider2D.enabled = false;
