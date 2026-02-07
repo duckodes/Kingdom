@@ -54,7 +54,7 @@ public class Player : Base, IStart, IUpdate
         float moveInput = 0f;
         // Move Left
         if (Input.GetKey(KeyCodes.MoveLeft) && !Input.GetKey(KeyCodes.MoveRight) 
-            || Joystick.Instance.Direction.x < -0.35f)
+            || Joystick.Instance.Direction.y >= 0 && Joystick.Instance.Direction.x < -0.35f)
         {
             moveInput = -1f;
             spriteRenderer.flipX = true;
