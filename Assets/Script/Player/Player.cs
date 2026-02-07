@@ -17,7 +17,6 @@ public class Player : Base, IStart, IUpdate
     private int jumpTimes;
     private float width;
     private float height;
-    private bool JumpButtonClicked;
     public void OnStart()
     {
         width = spriteRenderer.bounds.size.x;
@@ -42,12 +41,12 @@ public class Player : Base, IStart, IUpdate
             }
         }
         if (Input.GetKeyDown(KeyCodes.Jump) && !Input.GetKey(KeyCodes.MoveDown)
-            || Joystick.Instance.Direction.y > 0 && ControlButtons.Instance.JumpButtonClicked)
+            || ControlButtons.Instance.JumpButtonPointerDown)
         {
             jumpTimes++;
             rb.AddForce(Vector2.up * jumpForce);
             animator.Play("PlayerJump");
-            ControlButtons.Instance.JumpButtonClicked = false;
+            ControlButtons.Instance.JumpButtonPointerDown = false;
         }
     }
     private async void Move()
@@ -55,7 +54,7 @@ public class Player : Base, IStart, IUpdate
         float moveInput = 0f;
         // Move Left
         if (Input.GetKey(KeyCodes.MoveLeft) && !Input.GetKey(KeyCodes.MoveRight) 
-            || Joystick.Instance.Direction.x < 0)
+            || Joystick.Instance.Direction.x < -0.35f)
         {
             moveInput = -1f;
             spriteRenderer.flipX = true;
@@ -66,7 +65,7 @@ public class Player : Base, IStart, IUpdate
         }
         // Move Right
         if (Input.GetKey(KeyCodes.MoveRight) && !Input.GetKey(KeyCodes.MoveLeft) 
-            || Joystick.Instance.Direction.x > 0)
+            || Joystick.Instance.Direction.x > 0.35f)
         {
             moveInput = 1f;
             spriteRenderer.flipX = false;
@@ -84,7 +83,7 @@ public class Player : Base, IStart, IUpdate
         }
         // Go Down
         if (Input.GetKeyDown(KeyCodes.Jump) && Input.GetKey(KeyCodes.MoveDown) && !IsGroundLayer()
-            || Joystick.Instance.Direction.y < 0 && ControlButtons.Instance.JumpButtonClicked && !IsGroundLayer())
+            || Joystick.Instance.Direction.y < 0 && ControlButtons.Instance.JumpButtonPointerDown && !IsGroundLayer())
         {
             animator.Play("PlayerDown");
             Collider2D.enabled = false;
@@ -94,6 +93,7 @@ public class Player : Base, IStart, IUpdate
         // Collider Limit
         if (Input.GetKeyUp(KeyCodes.MoveDown)
             || Input.GetKeyUp(KeyCodes.Jump)
+            || ControlButtons.Instance.JumpButtonPointerUp
             || IsGroundLayer()
             || IsWallLayer())
         {
