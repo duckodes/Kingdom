@@ -16,7 +16,7 @@ public class ControlButtons : Base, IStart
         jumpButton.onClick.AddListener(async delegate
         {
             JumpButtonClicked = true;
-            await Wait.Milliseconds(100, out Action cancel);
+            await Wait.Milliseconds(10, out Action cancel);
             if (JumpButtonClicked)
             {
                 JumpButtonClicked = false;

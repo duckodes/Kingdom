@@ -47,6 +47,7 @@ public class Player : Base, IStart, IUpdate
             jumpTimes++;
             rb.AddForce(Vector2.up * jumpForce);
             animator.Play("PlayerJump");
+            ControlButtons.Instance.JumpButtonClicked = false;
         }
     }
     private async void Move()
