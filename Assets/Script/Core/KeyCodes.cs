@@ -23,12 +23,17 @@ public class KeyCodes : Base, IAwake
     {
         UpdateKeys();
     }
-    public static void SetKeys()
+    public static void SaveKey(Action<Keys> setKey)
+    {
+        setKey(keys);
+        SaveKeys();
+    }
+    private static void SaveKeys()
     {
         PlayerPrefs.SetString(nameof(Keys), JsonUtility.ToJson(keys));
         PlayerPrefs.Save();
     }
-    public static void UpdateKeys()
+    private static void UpdateKeys()
     {
         if (PlayerPrefs.HasKey(nameof(Keys)))
         {
@@ -37,16 +42,16 @@ public class KeyCodes : Base, IAwake
 
             if (!HasAllFields(jsonData))
             {
-                SetKeys();
+                SaveKeys();
             }
         }
         else
         {
             keys = new Keys();
-            SetKeys();
+            SaveKeys();
         }
     }
-    public static bool HasAllFields(string json)
+    private static bool HasAllFields(string json)
     {
         var matches = Regex.Matches(json, "\"(\\w+)\"\\s*:");
 

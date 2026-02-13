@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using System.IO;
 
 public class ScriptTemplateProcessor : AssetModificationProcessor
@@ -39,3 +40,4 @@ public class {className} : Base, IStart, IUpdate
 
     }
 }
+#endif
